@@ -160,6 +160,8 @@ export default function Home() {
           centerVignette={true}
           outerVignette={true}
           smooth={true}
+          glitchColors={["#000000ff", "#4b4b4bff", "#034603ff"]}
+          characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
         />
       </div>
 
