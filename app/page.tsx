@@ -6,17 +6,27 @@ import { CometCard } from "@/components/comet-card";
 import { VideoText } from "@/components/video-text";
 import ChromaGrid from '@/components/ChromaGrid';
 import TextPressure from '@/components/TextPressure';
-import BlurText from "@/components/BlurText";
 import TypingText from "@/components/typing-text"
 import { FloatingDockHorizontal } from "@/components/floating-dock";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+import { YouTubePlayer } from "@/components/ui/youtube-video-player";
+import BlurText from "@/components/BlurText";
+import {Avatar} from "@heroui/react";
+import ScrambledText from '@/components/ScrambledText';
+  
+
 import {
-  IconBrandGithub,
   IconMathIntegralX,
   IconSql,
   IconBrandAws,
   IconBrandPython,
 } from "@tabler/icons-react";
 import TiltedCard from '@/components/TiltedCard';
+import { LineShadowText } from "@/components/ui/line-shadow-text"
+
+
+const imageUrl =
+    "https://res.cloudinary.com/dwko6puxt/image/upload/v1766593674/yomero_nrsjkf.jpg";
 
 const links = [
     {
@@ -67,7 +77,7 @@ const links = [
     },
  
     {
-      title: "Mathemathics",
+      title: "Mathematics",
       icon: (
         <IconMathIntegralX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
@@ -315,28 +325,11 @@ export default function Home() {
       </section>
       <section className="mt-4 flex w-full justify-center px-4">
         <div className="w-full max-w-full sm:max-w-fit">
-          <div className="
-  rounded-md
-  bg-gray-800
-  px-4
-  py-3
-  font-mono
-  text-green-50
-  shadow-lg
-  text-center
-  sm:text-left
-">
+          <div className="rounded-md bg-gray-800 px-4 py-3 font-mono  text-green-50 shadow-lg text-center sm:text-left">
             <TypingText
               text="> main skills"
               grow
-              className="
-    mx-auto
-    text-base
-    sm:text-lg
-    md:text-2xl
-    whitespace-normal
-    md:whitespace-nowrap
-  "
+              className="mx-auto text-base sm:text-lg md:text-2xl whitespace-normal md:whitespace-nowrap"
             />
           </div>
         </div>
@@ -346,27 +339,36 @@ export default function Home() {
           items={links}
         />
       </section>
+      <section className="mt-4 flex w-full justify-center px-4">
+        <div className="w-full max-w-full sm:max-w-fit">
+          <div className="rounded-md bg-gray-800 px-4 py-3 font-mono  text-green-50 shadow-lg text-center sm:text-left">
+            <TypingText
+              text="> certifications"
+              grow
+              className="mx-auto text-base sm:text-lg md:text-2xl whitespace-normal md:whitespace-nowrap"
+            />
+          </div>
+        </div>
+      </section>
       <section className="w-full px-4 mt-12">
         <div
           className="
-            grid
-    grid-cols-1
-
-    gap-y-4
-    gap-x-8
-
-    sm:grid-cols-2
-    sm:gap-y-6
-
-    md:grid-cols-3
-    md:gap-x-110
-
-    lg:grid-cols-4
-
-    max-w-4xl
-    mx-auto
-    place-items-center
-          "
+            grid grid-cols-1
+            
+            gap-y-4
+            gap-x-8
+            
+            sm:grid-cols-2
+            sm:gap-y-6
+            
+            md:grid-cols-3
+            md:gap-x-110
+            
+            lg:grid-cols-4
+            
+            max-w-4xl
+            mx-auto
+            place-items-center"
         >
           {/* cards aquí */}
           <TiltedCard
@@ -428,6 +430,154 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="mt-4 flex w-full justify-center px-4">
+        <div className="w-full max-w-full sm:max-w-fit">
+          <div className="rounded-md bg-gray-800 px-4 py-3 font-mono  text-green-50 shadow-lg text-center sm:text-left">
+            <TypingText
+              text="> The idea isn’t to sell smoke, but to show how I think and how I solve problems."
+              grow
+              className="mx-auto text-base sm:text-lg md:text-2xl whitespace-normal md:whitespace-nowrap"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <div className="relative mx-auto grid 
+        h-auto md:h-[35rem]
+        max-w-4xl 
+        grid-cols-1 md:grid-cols-2
+        items-start md:items-center
+        gap-6 md:gap-5">
+        {/* IMAGEN */}
+        <div className="flex items-center justify-center max-w-4xl">
+          <DirectionAwareHover imageUrl={imageUrl}>
+            <p className="text-xl font-bold">I just take this photo {"<@:)"}</p>
+            <p className="text-sm font-normal"></p>
+          </DirectionAwareHover>
+        </div>
+        
+        {/* VIDEO */}
+        <section className="space-y-1">
+          <div>
+            <h2 className="mb-1 text-2xl font-semibold text-white"></h2>
+            <p className="text-muted-foreground text-white ">
+              Sample math video
+            </p>
+          </div>
+
+          <div className="max-w-2xl">
+            <YouTubePlayer
+              videoId="P_qyPXMU074"
+              title=""
+              customThumbnail="https://res.cloudinary.com/dwko6puxt/image/upload/v1766593285/Gemini_Generated_Image_pow3d3pow3d3pow3_rfha1p.png"
+            />
+          </div>
+        </section>
+      </div>
+
+      <div className=" relative mx-auto
+        grid
+        max-w-2xl
+        grid-cols-2
+        items-center
+        gap-6 md:gap-10
+        mt-10 md:mt-0">
+        <a href="https://www.credly.com/badges/e5e0cde3-6b30-4e8a-b7c2-fb9cdc4fbcaf/public_url">
+          <div className="flex justify-start md:justify-center">
+            <Avatar size="lg">
+              <Avatar.Image
+                alt="Large Avatar"
+                src="https://res.cloudinary.com/dwko6puxt/image/upload/v1766771457/deep-learning-and-reinforcement-learning-Photoroom_hurpjb.png"
+              />
+              <Avatar.Fallback>LG</Avatar.Fallback>
+            </Avatar>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/c451a869-9de8-4e91-bc17-e5a16f189bec/public_url">
+          <div className="flex justify-end md:justify-center">
+            <Avatar size="lg">
+              <Avatar.Image
+                alt="Large Avatar"
+                src="https://res.cloudinary.com/dwko6puxt/image/upload/v1766771562/machine-learning-capstone-Photoroom_glapbm.png"
+              />
+              <Avatar.Fallback>LG</Avatar.Fallback>
+            </Avatar>
+          </div>
+        </a>
+      </div>
+      <div className="flex justify-center items-center w-full mt-15">
+        <LineShadowText
+          shadowColor="white"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold"
+        >
+          Education
+        </LineShadowText>
+        </div>
+          <div
+            className="
+              relative mx-auto
+              grid
+              max-w-8xl
+              grid-cols-1 md:grid-cols-2
+              items-center
+              gap-6 md:gap-10
+              mt-10 md:mt-0
+              text-center md:text-left
+            "
+          >
+            <ScrambledText
+              className="scrambled-text-demo"
+              radius={20}
+              duration={1.2}
+              speed={0.5}
+              scrambleChars={".:"}
+            >
+              I studied in ESCOM from IPN (Instituto Politecnico Nacional)
+            </ScrambledText>
+            <div className="flex gap-6 justify-center">
+              <img
+                src="https://res.cloudinary.com/dwko6puxt/image/upload/v1766777730/imagen_2025-12-26_133528056_msfl5n.png"
+                alt=""
+                className="w-32 sm:w-40 md:w-48 h-auto"
+              />
+              <img
+                src="https://res.cloudinary.com/dwko6puxt/image/upload/v1766777817/imagen_2025-12-26_133655810_xtmsn7.png"
+                alt=""
+                className="w-32 sm:w-40 md:w-48 h-auto"
+              />
+            </div>
+        </div>
+        <div
+            className="
+              relative mx-auto
+    flex flex-col md:flex-row
+    items-center
+    justify-center
+    gap-0 md:gap-4
+    mb-4 md:mb-2
+    text-center
+            "
+          >
+            <ScrambledText
+              className="scrambled-text-demo"
+              radius={20}
+              duration={1.2}
+              speed={0.5}
+              scrambleChars={".:"}
+            >
+              gonzalezsergio2234@gmail.com
+            </ScrambledText>
+            <ScrambledText
+              className="scrambled-text-demo"
+              radius={20}
+              duration={1.2}
+              speed={0.5}
+              scrambleChars={".:"}
+            >
+              +52 2462143250
+            </ScrambledText>
+          </div>
+
     </main>
   );
 }
