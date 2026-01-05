@@ -232,7 +232,7 @@ export default function Home() {
             </CometCard>
           </a>
           <a
-            href="https://emotion-detector-sergio-gonzalez.streamlit.app"
+            href="http://98.88.17.240:8501"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
