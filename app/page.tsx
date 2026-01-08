@@ -13,7 +13,7 @@ import { YouTubePlayer } from "@/components/ui/youtube-video-player";
 import BlurText from "@/components/BlurText";
 import {Avatar} from "@heroui/react";
 import ScrambledText from '@/components/ScrambledText';
-  
+import Link from 'next/link';
 
 import {
   IconMathIntegralX,
@@ -263,7 +263,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-                  <div className="text-xs">Emotion Detector</div>
+                  <div className="text-xs">Emotion Detector (AWS + Docker Deploy)</div>
                   <div className="text-xs text-gray-300 opacity-50">BERT</div>
                 </div>
               </button>
@@ -307,7 +307,43 @@ export default function Home() {
               </button>
             </CometCard>
           </a>
+          <div>
+            <Link href="/customers/">
+              <CometCard >
+                <button
+                  type="button"
+                  className="my-10 flex w-80 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2  md:my-20 md:p-4"
+                  aria-label="View invite F7RA"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transform: "none",
+                    opacity: 1,
+                  }}
+                >
+                  <div className="mx-2 flex-1">
+                    <div className="relative mt-2 aspect-[4/4] w-full">
+                      <img
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-100"
+                        alt="Invite background"
+                        src="https://res.cloudinary.com/dwko6puxt/image/upload/v1767836313/ChatGPT_Image_7_ene_2026_07_38_25_p.m._vrmd0v.png"
+                        style={{
+                          boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
+                          opacity: 1,
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+                    <div className="text-xs">Customer Segmentation</div>
+                    <div className="text-xs text-gray-300 opacity-50">PowerBI + Python</div>
+                  </div>
+                </button>
+              </CometCard>
+           </Link>
+          </div>  
         </div>
+
         <div className="relative h-[210px] w-full ">
             <VideoText src="https://res.cloudinary.com/dwko6puxt/video/upload/v1766377594/2025-12-21-22-09-09_ekabjz.webm">About me</VideoText>
         </div>
